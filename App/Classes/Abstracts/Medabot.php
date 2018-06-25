@@ -2,6 +2,8 @@
 
 namespace App\Classes\Abstracts;
 
+use App\Contracts\Part;
+
 abstract class Medabot
 {
     private $colour;
@@ -31,7 +33,7 @@ abstract class Medabot
     /**
      * @return mixed
      */
-    public function getHead()
+    public function getHead() : Part
     {
         return $this->head;
     }
@@ -39,7 +41,7 @@ abstract class Medabot
     /**
      * @param mixed $head
      */
-    public function setHead($head)
+    public function setHead(Part $head)
     {
         $this->head = $head;
     }

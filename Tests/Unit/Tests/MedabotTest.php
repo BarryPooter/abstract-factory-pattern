@@ -3,12 +3,14 @@
 namespace Tests;
 
 use App\Classes\Abstracts\Medabot;
+use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
 class MedabotDouble extends Medabot
-{
+{}
 
-}
+class PartDouble implements Part
+{}
 
 class MedabotTest extends TestCase
 {
@@ -23,6 +25,13 @@ class MedabotTest extends TestCase
     public function testInstanceOf () : void
     {
         $this->assertInstanceOf(Medabot::class, $this->sut);
+    }
+
+    public function testGetHead () : void
+    {
+        // Test if the function returns a Part instance.
+        $this->sut->setHead(new PartDouble());
+        $this->assertInstanceOf(Part::class, $this->sut->getHead());
     }
 
     public function testGetColour () : void
