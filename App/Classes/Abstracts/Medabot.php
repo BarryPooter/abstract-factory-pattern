@@ -15,7 +15,7 @@ abstract class Medabot
     /**
      * @return mixed
      */
-    public function getColour()
+    public function getColour() : string
     {
         return $this->colour;
     }
@@ -23,7 +23,7 @@ abstract class Medabot
     /**
      * @param mixed $colour
      */
-    public function setColour($colour)
+    public function setColour(string $colour)
     {
         $this->colour = $colour;
     }

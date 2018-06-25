@@ -24,4 +24,15 @@ class MedabotTest extends TestCase
     {
         $this->assertInstanceOf(Medabot::class, $this->sut);
     }
+
+    public function testGetColour () : void
+    {
+        // Test if the method works.
+        $this->sut->setColour('red');
+        $this->assertEquals('red', $this->sut->getColour());
+
+        // Test if it's dynamic.
+        $this->sut->setColour('blue');
+        $this->assertEquals('blue', $this->sut->getColour());
+    }
 }
