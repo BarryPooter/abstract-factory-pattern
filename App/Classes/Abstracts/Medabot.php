@@ -2,6 +2,7 @@
 
 namespace App\Classes\Abstracts;
 
+use App\Contracts\Medal;
 use App\Contracts\Part;
 
 abstract class Medabot
@@ -102,7 +103,7 @@ abstract class Medabot
     /**
      * @return mixed
      */
-    public function getMedal()
+    public function getMedal() : Medal
     {
         return $this->medal;
     }
@@ -110,7 +111,7 @@ abstract class Medabot
     /**
      * @param mixed $medal
      */
-    public function setMedal($medal)
+    public function setMedal(Medal $medal)
     {
         $this->medal = $medal;
     }

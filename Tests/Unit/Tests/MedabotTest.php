@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Classes\Abstracts\Medabot;
+use App\Contracts\Medal;
 use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
@@ -10,6 +11,9 @@ class MedabotDouble extends Medabot
 {}
 
 class PartDouble implements Part
+{}
+
+class MedalDouble implements Medal
 {}
 
 class MedabotTest extends TestCase
@@ -32,6 +36,12 @@ class MedabotTest extends TestCase
         // Test if the function returns a Part instance.
         $this->sut->setHead(new PartDouble());
         $this->assertInstanceOf(Part::class, $this->sut->getHead());
+    }
+
+    public function testGetMedal () : void
+    {
+        $this->sut->setMedal(new MedalDouble);
+        $this->assertInstanceOf(Medal::class, $this->sut->getMedal());
     }
 
     public function testGetleg () : void
