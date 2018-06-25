@@ -24,11 +24,17 @@ class MedabotMedalTest extends TestCase
         $this->assertInstanceOf(Medal::class, $this->sut);
     }
 
-//    public function testSetSpecialAbility() : void
-//    {
-//    }
+    public function testSetSpecialAbility() : void
+    {
+        $this->sut->setSpecialAbility("Huge Explosion");
+        $this->assertEquals("Huge Explosion", $this->sut->getSpecialAbility());
 
-//    public function testSetName() : void
-//    {
-//    }
+        // See if the setter & getter are dynamic.
+        $this->sut->setSpecialAbility("Magic Shield");
+        $this->assertEquals("Magic Shield", $this->sut->getSpecialAbility());
+    }
+
+    public function testSetName() : void
+    {
+    }
 }
