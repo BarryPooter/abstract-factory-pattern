@@ -2,8 +2,8 @@
 
 namespace App\Classes\Medals;
 
-use App\Contracts\Medal;
+use App\Classes\Abstracts\MedabotMedal;
 
-class BeetleMedal implements Medal
+class BeetleMedal extends MedabotMedal
 {
 }
