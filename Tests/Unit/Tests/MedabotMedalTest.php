@@ -36,5 +36,11 @@ class MedabotMedalTest extends TestCase
 
     public function testSetName() : void
     {
+        $this->sut->setName("Test Medal");
+        $this->assertEquals("Test Medal", $this->sut->getName());
+
+        // See if the setter & getter are dynamic.
+        $this->sut->setName("Super Medal");
+        $this->assertEquals("Super Medal", $this->sut->getName());
     }
 }
