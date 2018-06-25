@@ -1,7 +1,7 @@
 <?php
 namespace App\Classes\Abstracts;
 
-class BuildMedabot
+abstract class BuildMedabot
 {
 
 }
