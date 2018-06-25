@@ -8,11 +8,22 @@ abstract class Medabot
 {
     private $colour;
     private $head;
-    private $leftArm;
-    private $rightArm;
-    private $leftLeg;
-    private $rightLeg;
+    private $arms;
+    private $legs;
     private $medal;
+
+    public function __construct()
+    {
+        $this->arms = (array) [
+            'left'  => null,
+            'right' => null
+        ];
+
+        $this->legs = (array) [
+            'left'  => null,
+            'right' => null
+        ];
+    }
 
     /**
      * @return mixed
@@ -47,67 +58,19 @@ abstract class Medabot
     }
 
     /**
-     * @return mixed
+     * Get an arm - need to specify which [left/right].
+     * @param string $side
+     * @return Part
+     * @throws \Exception
      */
-    public function getLeftArm()
+    public function getArm (string $side) : Part
     {
-        return $this->leftArm;
+        return $this->arms[$side];
     }
 
-    /**
-     * @param mixed $leftArm
-     */
-    public function setLeftArm($leftArm)
+    public function setArm (string $side, Part $part) : void
     {
-        $this->leftArm = $leftArm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRightArm()
-    {
-        return $this->rightArm;
-    }
-
-    /**
-     * @param mixed $rightArm
-     */
-    public function setRightArm($rightArm)
-    {
-        $this->rightArm = $rightArm;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLeftLeg()
-    {
-        return $this->leftLeg;
-    }
-
-    /**
-     * @param mixed $leftLeg
-     */
-    public function setLeftLeg($leftLeg)
-    {
-        $this->leftLeg = $leftLeg;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRightLeg()
-    {
-        return $this->rightLeg;
-    }
-
-    /**
-     * @param mixed $rightLeg
-     */
-    public function setRightLeg($rightLeg)
-    {
-        $this->rightLeg = $rightLeg;
+        $this->arms[$side] = $part;
     }
 
     /**
