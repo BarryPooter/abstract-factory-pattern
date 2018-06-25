@@ -34,6 +34,14 @@ class MedabotTest extends TestCase
         $this->assertInstanceOf(Part::class, $this->sut->getHead());
     }
 
+    public function testGetleg () : void
+    {
+        $this->sut->setLeg('left', new PartDouble());
+        $this->sut->setLeg('right', new PartDouble());
+        $this->assertInstanceOf(Part::class, $this->sut->getLeg('left'));
+        $this->assertInstanceOf(Part::class, $this->sut->getLeg('right'));
+    }
+
     public function testGetArm () : void
     {
         $this->sut->setArm('left', new PartDouble());

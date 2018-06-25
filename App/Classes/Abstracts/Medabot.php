@@ -63,11 +63,37 @@ abstract class Medabot
      * @return Part
      * @throws \Exception
      */
+    public function getLeg (string $side) : Part
+    {
+        return $this->legs[$side];
+    }
+
+    /**
+     * Set a specfic Leg Part.
+     * @param string $side
+     * @param Part $part
+     */
+    public function setLeg (string $side, Part $part) : void
+    {
+        $this->legs[$side] = $part;
+    }
+
+    /**
+     * Get an arm - need to specify which [left/right].
+     * @param string $side
+     * @return Part
+     * @throws \Exception
+     */
     public function getArm (string $side) : Part
     {
         return $this->arms[$side];
     }
 
+    /**
+     * Set a specfic Leg Part.
+     * @param string $side
+     * @param Part $part
+     */
     public function setArm (string $side, Part $part) : void
     {
         $this->arms[$side] = $part;
