@@ -2,8 +2,8 @@
 
 namespace Tests;
 
+use App\Classes\Abstracts\MedabotMedal;
 use App\Classes\Medals\BeetleMedal;
-use App\Contracts\Medal;
 use PHPUnit\Framework\TestCase;
 
 class BeetleMedalTest extends TestCase
@@ -18,6 +18,6 @@ class BeetleMedalTest extends TestCase
 
     public function testInstanceOf () : void
     {
-        $this->assertInstanceOf(Medal::class, $this->sut);
+        $this->assertInstanceOf(MedabotMedal::class, $this->sut);
     }
 }

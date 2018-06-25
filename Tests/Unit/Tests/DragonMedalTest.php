@@ -2,8 +2,8 @@
 
 namespace Tests;
 
+use App\Classes\Abstracts\MedabotMedal;
 use App\Classes\Medals\DragonMedal;
-use App\Contracts\Medal;
 use PHPUnit\Framework\TestCase;
 
 class DragonMedalTest extends TestCase
@@ -18,6 +18,6 @@ class DragonMedalTest extends TestCase
 
     public function testInstanceOf () : void
     {
-        $this->assertInstanceOf(Medal::class, $this->sut);
+        $this->assertInstanceOf(MedabotMedal::class, $this->sut);
     }
 }

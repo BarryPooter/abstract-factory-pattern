@@ -2,7 +2,7 @@
 
 ##### Additional Documentation
 UML - Drawing of the Application:
-https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#G1aGXfrGKiHqdu8q_QTQPyHRovpt-AQD7l
+https://drive.google.com/file/d/1aGXfrGKiHqdu8q_QTQPyHRovpt-AQD7l/view?usp=sharing
 
 #### Questions Answered
 ##### Welk design pattern is gekozen?
