@@ -24,7 +24,6 @@ class RangedMedabotFactory implements MedabotFactoryInterface
     private function _getHead() : Part
     {
         $head = new RangedMedabotHead();
-        $head->setDamageOutput(40);
         return $head;
     }
 }
