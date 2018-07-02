@@ -45,6 +45,8 @@ class MedabotTest extends TestCase
 
     public function testGetHead () : void
     {
+        $this->assertNull($this->sut->getHead());
+
         // Test if the function returns a Part instance.
         $this->sut->setHead(new PartDouble());
         $this->assertInstanceOf(Part::class, $this->sut->getHead());

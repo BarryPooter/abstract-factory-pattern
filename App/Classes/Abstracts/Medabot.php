@@ -45,7 +45,7 @@ abstract class Medabot
     /**
      * @return mixed
      */
-    public function getHead() : Part
+    public function getHead() :? Part
     {
         return $this->head;
     }
