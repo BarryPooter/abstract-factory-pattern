@@ -12,6 +12,6 @@ class BeetleMedal extends MedabotMedal
     public function __construct()
     {
         $this->setName("Beetle Medal");
-        $this->setSpecialAbility("fire an Ultra Shot, dealing huge amounts of damage.");
+        $this->setSpecialAbility("doubles the damage of a Beetle Stomper for one turn.");
     }
 }

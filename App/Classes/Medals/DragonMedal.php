@@ -12,6 +12,6 @@ class DragonMedal extends MedabotMedal
     public function __construct()
     {
         $this->setName("Dragon Medal");
-        $this->setSpecialAbility("set the opponent on fire, dealing damage every turn which can not be undone.");
+        $this->setSpecialAbility("spits fire from the Head to set the opponent on fire from a distance, dealing damage every turn.");
     }
 }

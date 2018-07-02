@@ -19,7 +19,9 @@ class MeleeMedabotFactory implements MedabotFactoryInterface
         $medabot->setArm('right', new MeleeMedabotArm());
         $medabot->setLeg('left', new MeleeMedabotLeg());
         $medabot->setLeg('right', new MeleeMedabotLeg());
-        $medabot->setColour(array_rand(['purple', 'green', 'orange'], 1));
+
+        $colours = ['purple', 'blue', 'white'];
+        $medabot->setColour($colours[array_rand($colours, 1)]);
 
         return $medabot;
     }
