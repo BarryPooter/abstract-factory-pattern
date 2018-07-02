@@ -12,6 +12,7 @@ class RangedMedabotHead extends Part
      */
     public function __construct()
     {
+        $this->setName('Dragon Head');
         $this->setDamageOutput(40);
     }
 }

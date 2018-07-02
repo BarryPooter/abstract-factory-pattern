@@ -12,6 +12,7 @@ class RangedMedabotArm extends Part
      */
     public function __construct()
     {
+        $this->setName('Dragon Gun');
         $this->setDamageOutput(30);
     }
 }

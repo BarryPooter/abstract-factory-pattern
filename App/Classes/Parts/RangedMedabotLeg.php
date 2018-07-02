@@ -12,6 +12,7 @@ class RangedMedabotLeg extends Part
      */
     public function __construct()
     {
-        $this->setDamageOutput(15);
+        $this->setName('Sturdy Dragon Leg');
+        $this->setDamageOutput(20);
     }
 }

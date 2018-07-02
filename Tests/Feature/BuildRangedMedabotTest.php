@@ -57,4 +57,21 @@ class BuildRangedMedabotTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEquals(0, $leftLeg->getDamageOutput());
         $this->assertNotEquals(0, $rightLeg->getDamageOutput());
     }
+
+    public function testHasName () : void
+    {
+        // See if we have a Head with damage.
+        $parts = [
+            $this->medabot->getHead(),
+            $this->medabot->getArm('left'),
+            $this->medabot->getArm('right'),
+            $this->medabot->getLeg('left'),
+            $this->medabot->getLeg('right'),
+            $this->medabot->getMedal()
+        ];
+
+        foreach ($parts as $part) {
+            $this->assertNotEquals(true, empty($part->getName()));
+        }
+    }
 }
