@@ -5,6 +5,7 @@ use App\Classes\Medals\DragonMedal;
 use App\Classes\Parts\RangedMedabotHead;
 use App\Classes\RangedMedabot;
 use App\Contracts\MedabotFactoryInterface;
+use App\Contracts\Part;
 
 class RangedMedabotFactory implements MedabotFactoryInterface
 {
@@ -12,8 +13,18 @@ class RangedMedabotFactory implements MedabotFactoryInterface
     {
         $medabot = new RangedMedabot();
         $medabot->setMedal(new DragonMedal());
-        $medabot->setHead(new RangedMedabotHead());
+        $medabot->setHead($this->_getHead());
 
         return $medabot;
+    }
+
+    /**
+     * @return Part
+     */
+    private function _getHead() : Part
+    {
+        $head = new RangedMedabotHead();
+        $head->setDamageOutput(40);
+        return $head;
     }
 }
