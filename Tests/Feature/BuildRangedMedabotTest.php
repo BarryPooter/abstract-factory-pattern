@@ -35,7 +35,16 @@ class BuildRangedMedabotTest extends \PHPUnit\Framework\TestCase
 
     public function testHasDamageSetByFactory () : void
     {
+        // See if we have a Head with damage.
         $head = $this->medabot->getHead();
         $this->assertNotEquals(0, $head->getDamageOutput());
+
+        // See if we have arms with damage.
+        $leftArm = $this->medabot->getArm('left');
+        $rightArm = $this->medabot->getArm('right');
+        $this->assertNotEquals(0, $leftArm->getDamageOutput());
+        $this->assertNotEquals(0, $rightArm->getDamageOutput());
+
+        // See if we have legs with damage.
     }
 }
