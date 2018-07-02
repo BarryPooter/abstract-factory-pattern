@@ -3,18 +3,17 @@
 namespace Tests;
 
 use App\Classes\Parts\RangedMedabotArm;
-use App\Classes\Parts\RangedMedabotHead;
 use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
-class RangedMedabotHeadTest extends TestCase
+class RangedMedabotArmTest extends TestCase
 {
     protected $sut;
 
     protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
     {
         parent::setUp();
-        $this->sut = new RangedMedabotHead();
+        $this->sut = new RangedMedabotArm();
     }
 
     public function testInstanceOf () : void
