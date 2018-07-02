@@ -14,7 +14,19 @@ class PartDouble implements Part
 {}
 
 class MedalDouble implements Medal
-{}
+{
+    public function getName(): string
+    {}
+
+    public function getSpecialAbility(): string
+    {}
+
+    public function setName(string $name): void
+    {}
+
+    public function setSpecialAbility(string $special): void
+    {}
+}
 
 class MedabotTest extends TestCase
 {
