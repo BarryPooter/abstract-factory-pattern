@@ -5,7 +5,7 @@ namespace App\Classes\Abstracts;
 use App\Contracts\Medal;
 use App\Contracts\Part;
 
-abstract class Medabot
+abstract class Medabot implements \App\Contracts\Medabot
 {
     private $colour;
     private $head;
