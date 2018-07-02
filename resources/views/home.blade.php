@@ -13,8 +13,8 @@
                 <li><strong>Left Leg:</strong> {{ $medabot->getLeg('left')->getName() }} which can deal {{ $medabot->getLeg('left')->getDamageOutput() }} damage.</li>
                 <li><strong>Right Leg:</strong> {{ $medabot->getLeg('right')->getName() }} which can deal {{ $medabot->getLeg('right')->getDamageOutput() }} damage.</li>
             </ul>
-            <span>This Medabot has a <strong>{{ $medabot->getMedal()->getName() }}</strong>
-                medal, which {{ $medabot->getMedal()->getSpecialAbility() }}</span>
+
+            <span>This Medabot has a <strong>{{ $medabot->getMedal()->getName() }}</strong> medal, which {{ $medabot->getMedal()->getSpecialAbility() }}</span>
         </div>
     @endforeach
 @endsection
