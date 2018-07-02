@@ -27,4 +27,13 @@ class PartTest extends TestCase
         $this->sut->setName('Testing Part');
         $this->assertEquals('Testing Part', $this->sut->getName());
     }
+
+    public function testDamageOutput () : void
+    {
+        $this->sut->setDamageOutput(40);
+        $this->assertEquals(40, $this->sut->getDamageOutput());
+
+        $this->sut->setDamageOutput(50);
+        $this->assertEquals(50, $this->sut->getDamageOutput());
+    }
 }
