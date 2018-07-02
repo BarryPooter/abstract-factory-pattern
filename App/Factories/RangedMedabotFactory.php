@@ -13,17 +13,8 @@ class RangedMedabotFactory implements MedabotFactoryInterface
     {
         $medabot = new RangedMedabot();
         $medabot->setMedal(new DragonMedal());
-        $medabot->setHead($this->_getHead());
+        $medabot->setHead(new RangedMedabotHead());
 
         return $medabot;
-    }
-
-    /**
-     * @return Part
-     */
-    private function _getHead() : Part
-    {
-        $head = new RangedMedabotHead();
-        return $head;
     }
 }
