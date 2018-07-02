@@ -13,6 +13,6 @@ class MeleeMedabotArm extends Part
     public function __construct()
     {
         $this->setName('Beetle Stomper');
-        $this->setDamageOutput(20);
+        $this->setDamageOutput(35);
     }
 }
