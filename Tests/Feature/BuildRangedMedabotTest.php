@@ -2,7 +2,9 @@
 
 
 use App\Classes\BuildRangedMedabot;
+use App\Classes\Parts\RangedMedabotArm;
 use App\Classes\Parts\RangedMedabotHead;
+use App\Classes\Parts\RangedMedabotLeg;
 use App\Classes\RangedMedabot;
 use App\Contracts\Medabot;
 use App\Contracts\Medal;
@@ -29,8 +31,12 @@ class BuildRangedMedabotTest extends \PHPUnit\Framework\TestCase
         // a Factory or not - it automatically
         // gets added in the according Factory.
         $this->assertInstanceOf(Medal::class, $this->medabot->getMedal());
-        $this->assertInstanceOf(Part::class, $this->medabot->getHead());
+
         $this->assertInstanceOf(RangedMedabotHead::class, $this->medabot->getHead());
+        $this->assertInstanceOf(RangedMedabotArm::class, $this->medabot->getArm('left'));
+        $this->assertInstanceOf(RangedMedabotArm::class, $this->medabot->getArm('right'));
+        $this->assertInstanceOf(RangedMedabotLeg::class, $this->medabot->getLeg('left'));
+        $this->assertInstanceOf(RangedMedabotLeg::class, $this->medabot->getLeg('right'));
     }
 
     public function testHasDamageSetByFactory () : void
