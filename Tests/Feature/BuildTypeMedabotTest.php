@@ -32,10 +32,16 @@ class BuildTypeMedabotTest extends \PHPUnit\Framework\TestCase
         foreach ($this->medabotTypes as $type) {
             $this->medabot = $type;
 
+            $this->_testMedabotHasColour();
             $this->_testHasParts();
             $this->_testHasDamageSetByFactory();
             $this->_testPartsHaveAName();
         }
+    }
+
+    private function _testMedabotHasColour () : void
+    {
+        $this->assertNotEquals(true, empty($this->medabot->getColour()));
     }
 
     private function _testHasParts ()

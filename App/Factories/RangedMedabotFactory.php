@@ -20,6 +20,7 @@ class RangedMedabotFactory implements MedabotFactoryInterface
         $medabot->setArm('right', new RangedMedabotArm());
         $medabot->setLeg('left', new RangedMedabotLeg());
         $medabot->setLeg('right', new RangedMedabotLeg());
+        $medabot->setColour(array_rand(['red', 'blue', 'white'], 1));
 
         return $medabot;
     }

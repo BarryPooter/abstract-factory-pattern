@@ -12,6 +12,6 @@ echo $blade->make('home', [
     'medabots' => [
         (new \App\Factories\RangedMedabotFactory())->build(),
         (new \App\Factories\RangedMedabotFactory())->build(),
-        (new \App\Factories\RangedMedabotFactory())->build(),
+        (new \App\Factories\MeleeMedabotFactory())->build(),
     ]
 ]);
