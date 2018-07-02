@@ -46,5 +46,9 @@ class BuildRangedMedabotTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEquals(0, $rightArm->getDamageOutput());
 
         // See if we have legs with damage.
+        $leftLeg = $this->medabot->getLeg('left');
+        $rightLeg = $this->medabot->getLeg('right');
+        $this->assertNotEquals(0, $leftLeg->getDamageOutput());
+        $this->assertNotEquals(0, $rightLeg->getDamageOutput());
     }
 }
