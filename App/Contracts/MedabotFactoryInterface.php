@@ -1,10 +1,8 @@
 <?php
 namespace App\Contracts;
 
-use App\Classes\Abstracts\Medabot;
-
 interface MedabotFactoryInterface
 {
     // Start building the unit.
-    public function build() : Medabot;
+    public function build() : \App\Contracts\Medabot;
 }

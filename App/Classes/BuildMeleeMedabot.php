@@ -3,11 +3,13 @@
 namespace App\Classes;
 
 use App\Classes\Abstracts\BuildMedabot;
+use App\Factories\MeleeMedabotFactory;
 
 class BuildMeleeMedabot extends BuildMedabot
 {
     public function build(): \App\Contracts\Medabot
     {
-        return new MeleeMedabot();
+        $factory = new MeleeMedabotFactory;
+        return $factory->build();
     }
 }

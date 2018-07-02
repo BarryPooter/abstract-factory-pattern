@@ -6,6 +6,8 @@ use App\Classes\Abstracts\BuildMedabot;
 use App\Classes\BuildMeleeMedabot;
 use App\Classes\MeleeMedabot;
 use App\Contracts\Medabot;
+use App\Contracts\Medal;
+use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
 class BuildMeleeMedabotTest extends TestCase
@@ -29,5 +31,12 @@ class BuildMeleeMedabotTest extends TestCase
 
         $this->assertInstanceOf(Medabot::class, $returnInstance);
         $this->assertInstanceOf(MeleeMedabot::class, $returnInstance);
+
+        // We need to test if the returned Medabot
+        // has Parts and a Medal. We do this to
+        // see if the Medabot has been made in
+        // a Factory or not - it automatically
+        // gets added in the according Factory.
+        $this->assertInstanceOf(Medal::class, $returnInstance->getMedal());
     }
 }
