@@ -5,6 +5,7 @@ namespace Tests;
 use App\Classes\Abstracts\BuildMedabot;
 use App\Classes\BuildMeleeMedabot;
 use App\Classes\MeleeMedabot;
+use App\Contracts\Medabot;
 use PHPUnit\Framework\TestCase;
 
 class BuildMeleeMedabotTest extends TestCase
@@ -24,6 +25,9 @@ class BuildMeleeMedabotTest extends TestCase
 
     public function testBuildMethod () : void
     {
-        $this->assertInstanceOf(MeleeMedabot::class, $this->sut->build());
+        $returnInstance = $this->sut->build();
+
+        $this->assertInstanceOf(Medabot::class, $returnInstance);
+        $this->assertInstanceOf(MeleeMedabot::class, $returnInstance);
     }
 }
