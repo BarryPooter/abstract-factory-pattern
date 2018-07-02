@@ -81,7 +81,8 @@ abstract class Medabot implements \App\Contracts\Medabot
 
     /**
      * Get an arm - need to specify which [left/right].
-     * @param string $side
+     * @param s
+     * tring $side
      * @return Part
      * @throws \Exception
      */

@@ -4,9 +4,11 @@ namespace Tests;
 
 use App\Classes\Abstracts\BuildMedabot;
 use App\Classes\BuildRangedMedabot;
+use App\Classes\Parts\RangedMedabotHead;
 use App\Classes\RangedMedabot;
 use App\Contracts\Medabot;
 use App\Contracts\Medal;
+use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
 class BuildRangedMedabotTest extends TestCase
@@ -37,5 +39,7 @@ class BuildRangedMedabotTest extends TestCase
         // a Factory or not - it automatically
         // gets added in the according Factory.
         $this->assertInstanceOf(Medal::class, $returnInstance->getMedal());
+        $this->assertInstanceOf(Part::class, $returnInstance->getHead());
+        $this->assertInstanceOf(RangedMedabotHead::class, $returnInstance->getHead());
     }
 }
