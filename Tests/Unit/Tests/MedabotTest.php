@@ -3,14 +3,14 @@
 namespace Tests;
 
 use App\Classes\Abstracts\Medabot;
+use App\Classes\Abstracts\Part;
 use App\Contracts\Medal;
-use App\Contracts\Part;
 use PHPUnit\Framework\TestCase;
 
 class MedabotDouble extends Medabot
 {}
 
-class PartDouble implements Part
+class PartDouble extends Part
 {}
 
 class MedalDouble implements Medal
