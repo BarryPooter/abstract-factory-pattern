@@ -12,15 +12,26 @@ Abstract Factory Pattern
 De Abstract Factory Pattern zorgt er voor dat er zeer flexibele objecten aangemaakt kunnen worden.
 
 ##### Welke concept is bedacht om het pattern te kunnen toepassen?
-Ik heb gekozen voor 2 soorten Medabots / robots, welke verschillende delen kunnen bevatten: een hoofd, armen, benen en een Medal.
+Ik heb gekozen voor een concept waar je twee types "Medabots" kan maken, een ranged en een melee Medabot.
+Deze Medabots hebben allebei verschillende types Parts, maar zijn gebaseerd op dezelfde Abstract class.
 
 ##### Wat zijn de responsibilities van de geimplementeerde classes?
-De client vraagt specifiek om een RangedMedabot of een MeleeMedabot.
+De Client vraagt een Ranged- of een Melee Medabot aan.
+De Client gebruikt hier een tussenklasse voor - deze is gebaseerd op een Abstract class: BuildMedabot.
 
-De factories zorgen ervoor dat de (business) logica wordt verwerkt tijdens het aanmaken van een type Medabot.
+Deze BuildMedabot subclasses roept de desbetreffende Factory aan; de RangedMedabotFactory of de MeleeMedabotFactory - welke tevens weer gebaseerd zijn op een Abstract MedabotFactory.
 
-De Abstract Medabot heeft standaard properties (het hoofd, de armen, de benen, de medal en de kleur) en bijhorende getters- & setters - welke elke subclass van Medabot moet inheriten.
+In de factories wordt logica toegpast die door de hele applicatie moet gelden - business logica heeft hier bijvoorbeeld een goede plek. Ook worden vereiste instellingen direct toegepast en wordt er een Medabot teruggegeven aan de caller.
+
+De Abstract Medabot class heeft standaard setters- en getters voor zijn properties (hieronder de bestaande properties):
+> Head
+> Arms = ['left', 'right']
+> Legs = ['left', 'right']
+> Colour
+> Medal
+
+Deze properties zijn allemaal Objects die òf een Part zijn òf een Medal.
 
 ##### In welk opzicht wordt polymorfie bereikt?
 
-Polymorfie wordt bereikt doordat elk verplicht onderdeel gebruik maakt van een interface of een subclass is van. Dit zorgt voor hoge configureerbaarheid en dus toont er hier polymorfie op.
+In de Abstract Factory Pattern is alles gebaseerd op abstracte klassen. Hierdoor bestaat er een standaard set methodes die in elke subclass van deze abstracte klassen en komt er een grote configureerbaarheid te bestaan en hierdoor wordt dus polymorfie bereikt.
